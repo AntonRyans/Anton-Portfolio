@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anton Ryans's Portfolio</title>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript"></script>
+    <style>
+        .topnav {
+    overflow: hidden;
+    background-color: #333;
+        }
+
+        .topnav a {
+         float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+            }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+            }
+
+        .topnav a.active {
+        background-color: #b0e0e6;
+        color: white;
+            }
+
+        @font-face {
+            font-family: "Geist";
+            src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --size: 20px;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: hsl(0, 0%, 6%);
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+        }
+
+        .el {
+            background: conic-gradient(
+                from 180deg at 50% 70%,
+                hsla(0, 0%, 98%, 1) 0deg,
+                #eec32d 72deg,
+                #ec4b4b 144deg,
+                #709ab9 216deg,
+                #4dffbf 288deg,
+                hsla(0, 0%, 98%, 1) 1turn
+            );
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+                url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+            mask-composite: intersect;
+            animation: flicker 20s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes flicker {
+            to {
+                mask-position: 50% 50%, 0 50%;
+            }
+        }
+
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(48, 46, 46, 0.7); /* Adds a translucent dark background for readability */
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #b0e0e6;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #b0e0e6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #b0e0e6;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #d3d3d3;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .pic {
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .long-pic {
+            width: 556px;
+            height: 400px;
+            margin: 20px auto;
+            border: 5px solid #171716;
+            box-shadow: 0 0 15px rgba(29, 29, 28, 0.5);
+        }
+
+        .wide-pic {
+            width: 652px;
+            height: 400px;
+            margin: 20px auto;
+            border: 5px solid #171716;
+            box-shadow: 0 0 15px rgba(29, 29, 28, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="Anton Ryans's Personal Portfolio.html">About Me</a>
+        <a href="Anton Ryans's Personal Portfolio Coding Projects Page.html">My Coding Projects</a>
+        <a href="Anton Ryans's Personal Portfolio Experience Page.html">My Experience</a>
+        <a href="Anton Ryans's Personal Portfolio Achievements Page.html">My Achievements and Certifications</a>
+        <a href="Anton Ryans's Personal Portfolio Contact Me Page.html">Contact Me</a>
+      </div>
+    <div class="el"></div>
+    <div class="content">
+        <h1>Experience</h1>
+        <img class="pic" src="csPic.jpg" alt="CS Logo">
+        <h2> Social Secretary of Computer Science Society </h2>
+        <p> Dec 2023 - Present </p>
+        <p> Location: Leicester, UK </p>
+        <p>
+            • Awarded Student Group Of The Year for 2023/24 by University Of Leicester’s Student Union.
+        </p>
+        <p>
+            • Conducted Social Events in collaboration with diverse teams. Involved in all stages of planning,
+            including budgeting and logistics.
+        </p>
+        <p>
+            • Executed a hackathon in partnership with IBM, coordinating logistics, scheduling, and stakeholder
+            communication to ensure a successful, impactful event for over 100 students focused on innovation
+            and problem-solving.
+        </p>
+        <p>
+            • Managed a student visit to IBM's Leicester office for 30 students, coordinating logistics and
+            schedules. Collaborated with team members and IBM staff demonstrating alliance and clear
+            communication for a successful and insightful event.
+        </p>
+        <p>
+            • Accomplished a Collaboration with 5 societies to plan and organize an event, “STEM Sports Day”.
+        </p>
+        <p>
+            • Successfully Proposed and Created a Ball for 100 students and a Trip to Barcelona, Spain
+            with 20 students
+        </p>
+
+        <h2> Founder and President of Filmmaking Society </h2>
+        <img class="pic" src="fmPic.jpg" alt="FM Logo">
+        <p> Oct 2024 - Present</p>
+        <p> Location: Leicester, UK </p>
+        <p>
+            • Founded the Filmmaking Society to foster a community of filmmakers and photographers.
+        </p>
+        <p>
+            • Planned and Produced a reel for University Of Leicester’s media team promoting Digital Open Day.
+        </p>
+        <p>
+            • Collaborated with other societies to film content at their events.
+        </p>
+        <p>
+            • Hosted film screenings and social events for people to meet other filmmakers
+        </p>
+
+        <h2> Volunteer at Food Rescue Volunteers Society</h2>
+        <img class="pic" src="foodRescuePic.png" alt="FR Logo">
+        <p> Location: Leicester, UK </p>
+        <p> Dec 2023 – Dec 2024 </p>
+        <p>
+            • Operated collaboratively with campus food outlets to facilitate the distribution of 
+            leftover meals to students in need at the end of each day.
+        </p>
+
+        <h2> Volunteer Intern at HOPE Qatar Centre For Special Needs</h2>
+        <img class="pic" src="HopePic.png" alt="Hope Logo">
+        <p> Location: Doha, Qatar </p>
+        <p> Jul 2024 – Aug 2024 </p>
+        <p>
+            • Guided the IT department and the teachers during the computer lab sessions.
+        </p>
+        <p>
+            • Contributed in helping the teachers handle the class of 20 students and the activities like Arts and
+              Crafts, Food Art, Dance and Computer Lab sessions.
+        </p>
+        <p>
+            • Photographed the Arts and Crafts Activities and presented the photos to teachers and parents.
+        </p>
+        <img class="long-pic" src="HOPE Qatar Intern Certificate.png" alt="Intern Certificate">
+
+        <h2> IEUK Technology Intern at Bright Network </h2>
+        <img class="pic" src="BNPic.png" alt="BN Logo">
+        <p> Location: Remote </p>
+        <p> Jun 2024 – Jul 2024 </p>
+        <p>
+            • Presented and documented a roadmap on a mobile app update for a business.
+        </p>
+        <p>
+            • Used the data given and collected to do Data Analysis on the users, the app and competitors.
+        </p>
+        <img class="wide-pic" src="BN Certificate.png" alt="Intern Certificate">
+
+        <h2> Social Media Admin at TEDXYouth@MESINDIANSCHOOL </h2>
+        <img class="pic" src="tedXPic.png" alt="TEDXYouth Logo">
+        <p> Sep 2020 – Feb 2021 </p>
+        <p> Location: Doha, Qatar </p>
+        <p>
+            • Executed a targeted Instagram campaign for event promotion, ensuring consistent messaging with attention to detail. 
+            Utilized strong diplomatic skills to create engaging content and infographics that proficiently attracted 
+            the target audience of 400 students.
+        </p>
+        <p>
+            • Collected data from 400 students in Instagram to understand opinions and interest about 
+            the event and implemented the data to improve the event.
+        </p>
+
+    </div>
+</body>
+</html>

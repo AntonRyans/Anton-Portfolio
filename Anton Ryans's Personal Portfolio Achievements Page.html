@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anton Ryans's Portfolio</title>
+    <style>
+        .topnav {
+    overflow: hidden;
+    background-color: #333;
+        }
+
+        .topnav a {
+         float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+            }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+            }
+
+        .topnav a.active {
+        background-color: #b0e0e6;
+        color: white;
+            }
+        @font-face {
+            font-family: "Geist";
+            src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --size: 20px;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: hsl(0, 0%, 6%);
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+        }
+
+        .el {
+            background: conic-gradient(
+                from 180deg at 50% 70%,
+                hsla(0, 0%, 98%, 1) 0deg,
+                #eec32d 72deg,
+                #ec4b4b 144deg,
+                #709ab9 216deg,
+                #4dffbf 288deg,
+                hsla(0, 0%, 98%, 1) 1turn
+            );
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+                url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+            mask-composite: intersect;
+            animation: flicker 20s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes flicker {
+            to {
+                mask-position: 50% 50%, 0 50%;
+            }
+        }
+
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(48, 46, 46, 0.7); /* Adds a translucent dark background for readability */
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #b0e0e6;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #b0e0e6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #b0e0e6;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #d3d3d3;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .pic {
+            width: 652px;
+            height: 400px;
+            margin: 20px auto;
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="Anton Ryans's Personal Portfolio.html">About Me</a>
+        <a href="Anton Ryans's Personal Portfolio Coding Projects Page.html">My Coding Projects</a>
+        <a href="Anton Ryans's Personal Portfolio Experience Page.html">My Experience</a>
+        <a href="Anton Ryans's Personal Portfolio Achievements Page.html">My Achievements and Certifications</a>
+        <a href="Anton Ryans's Personal Portfolio Contact Me Page.html">Contact Me</a>
+      </div>
+    <div class="el"></div>
+    <div class="content">
+        <h1>Achievements and Certifications</h1>
+
+        <h2> Runner-Up in LetsHack Leicester 24/25 Hackathon </h2>
+        <p>
+            I came runner-up in the LetsHack Leicester 24/25 Hackathon. My team's project was a Location-based event tracker website 
+            made with Python and JavaScript as the backend and made with HTML and CSS as the front-end. 
+            I developed the Python backend using the pandas library to manipulate data and the folium library to enhance user experience 
+            with mapping features. Additionally, I played a crucial role in delivering a three-minute pitch, 
+            effectively communicating the value and potential future enhancements of our solution.
+        </p>
+        <a href="https://github.com/AntonRyans/letsHack09" target="_blank">GitHub Repository of Project</a>
+        <div class="linkedin-post">
+            <a href="https://www.linkedin.com/posts/anton-ryans-ruban-a1a442295_last-weekend-my-team-and-i-came-2nd-in-the-activity-7261492702867836929-zjeX?utm_source=share&utm_medium=member_desktop" 
+                target="_blank">LinkedIn Post</a>
+        </div>
+
+        <h2> Certification in Data Science Orientation </h2>
+        <div>
+        <img class="pic" src="Data Science Certification Pic.png" alt="Certificate Picture">
+        </div>
+        <a href="https://www.credly.com/badges/5b61c733-1169-4768-b04a-aee9c459fe94/linked_in_profile" target="_blank">Link</a>
+
+        <h2> Build your First AI Chatbot Certificate by IBM </h2>
+        <div>
+        <img class="pic" src="IBM AI Chatbot Certificate.png" alt="Certificate Picture">
+        </div>
+        <a href="https://skills.yourlearning.ibm.com/certificate/share/82d1418683ewogICJsZWFybmVyQ05VTSIgOiAiMzkwMTIyN1JFRyIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIiwKICAib2JqZWN0SWQiIDogIk1ETC01MTAiCn04f5f379847-10" target="_blank">Link</a>
+        
+        <h2> Academic Innovation Certificate by IBM </h2>
+        <div>
+        <img class="pic" src="IBM AI Talk Certificate.png" alt="Certificate Picture">
+        </div>
+        <a href="https://skills.yourlearning.ibm.com/certificate/share/b63bd55ce9ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgIm9iamVjdElkIiA6ICJVUkwtRjAzODlCNTU4MUMwIiwKICAibGVhcm5lckNOVU0iIDogIjM5MDEyMjdSRUciCn0e9ccfccda9-10" target="_blank">Link</a>
+
+        <h2> Innovation with Design Thinking and AI Certificate by IBM </h2>
+        <div>
+        <img class="pic" src="IBM AI Course Certificate.png" alt="Certificate Picture">
+        </div>
+        <a href="https://skills.yourlearning.ibm.com/certificate/share/0508f4af20ewogICJvYmplY3RJZCIgOiAiVVJMLUNGMzVDOUU5MDk5QiIsCiAgImxlYXJuZXJDTlVNIiA6ICIzOTAxMjI3UkVHIiwKICAib2JqZWN0VHlwZSIgOiAiQUNUSVZJVFkiCn0289153c2f1-10" target="_blank">Link</a>
+        
+        <h2> Project Design and Requirements Gathering with IBM </h2>
+        <div>
+        <img class="pic" src="IBM AI Course Intro Certificate.png" alt="Certificate Picture">
+        </div>
+        <a href="https://skills.yourlearning.ibm.com/certificate/share/0a0e89ec8bewogICJvYmplY3RJZCIgOiAiVVJMLURFNUFFNjE5ODk5NSIsCiAgImxlYXJuZXJDTlVNIiA6ICIzOTAxMjI3UkVHIiwKICAib2JqZWN0VHlwZSIgOiAiQUNUSVZJVFkiCn0e1dcade407-10" target="_blank">Link</a>
+    </div>
+</body>
+</html>
