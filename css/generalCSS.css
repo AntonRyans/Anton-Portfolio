@@ -135,16 +135,16 @@ a:hover {
 }
 
 .long-pic {
-    width: 556px;
-    height: 400px;
+    width: auto; 
+    max-width: 100%;
+    height: auto; 
     margin: 20px auto;
     border: 5px solid #171716;
     box-shadow: 0 0 15px rgba(29, 29, 28, 0.5);
-    display: block; 
-    object-fit: cover; 
-    border-radius: 8px; 
+    display: block;
+    object-fit: contain; 
+    border-radius: 8px;
 }
-
 
 .wide-pic {
     width: 652px;
