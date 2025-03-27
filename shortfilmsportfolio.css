@@ -1,0 +1,128 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+        }
+
+        .topnav a {
+         float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+            }
+
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+            }
+
+        .topnav a.active {
+        background-color: #b0e0e6;
+        color: white;
+            }
+        @font-face {
+            font-family: "Geist";
+            src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --size: 20px;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            background: hsl(0, 0%, 6%);
+            margin: 0;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+        }
+
+        .el {
+            background: conic-gradient(
+                from 180deg at 50% 70%,
+                hsla(0, 0%, 98%, 1) 0deg,
+                #eec32d 72deg,
+                #ec4b4b 144deg,
+                #709ab9 216deg,
+                #4dffbf 288deg,
+                hsla(0, 0%, 98%, 1) 1turn
+            );
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+                url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
+            mask-composite: intersect;
+            animation: flicker 20s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes flicker {
+            to {
+                mask-position: 50% 50%, 0 50%;
+            }
+        }
+
+        .content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(48, 46, 46, 0.7); /* Adds a translucent dark background for readability */
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #b0e0e6;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: #b0e0e6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #b0e0e6;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #d3d3d3;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .pic {
+            width: 652px;
+            height: 400px;
+            margin: 20px auto;
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
