@@ -1,163 +1,423 @@
-/* General Resets */
+/* =========================================================
+   General Resets + Variables
+========================================================= */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --size: 20px;
-    --primary-color: #b0e0e6;
-    --text-color: white;
-    --bg-color: hsl(0, 0%, 6%);
-    --highlight-color: #ffd700;
+  --size: 20px;
+  --primary-color: #b0e0e6;
+  --text-color: white;
+  --bg-color: hsl(0, 0%, 6%);
+  --highlight-color: #ffd700;
 }
 
-/* Body Styling */
+/* =========================================================
+   Base Styles
+========================================================= */
 body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    background: var(--bg-color);
-    font-family: "Courier New", Courier, monospace;
-    color: var(--text-color);
-    margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
-/* Top Navigation */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
+html {
+  scroll-behavior: smooth;
 }
 
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+/* =========================================================
+   Background Carousel
+========================================================= */
+.background-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+.background-carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: carouselFade 30s infinite;
 }
 
-.topnav a.active {
-    background-color: var(--primary-color);
-    color: white;
+.background-carousel img:nth-child(1) { animation-delay: 0s; }
+.background-carousel img:nth-child(2) { animation-delay: 10s; }
+.background-carousel img:nth-child(3) { animation-delay: 20s; }
+
+@keyframes carouselFade {
+  0%, 100% { opacity: 0; }
+  5%, 30% { opacity: 1; }
+  35% { opacity: 0; }
 }
 
-/* Font Face */
-@font-face {
-    font-family: "Geist";
-    src: url("https://assets.codepen.io/605876/GeistVF.ttf") format("truetype");
+/* =========================================================
+   Theme-Specific Backgrounds
+========================================================= */
+.dark-images { display: none; }
+
+body.dark-mode .light-images { display: none; }
+body.dark-mode .dark-images { display: block; }
+
+/* =========================================================
+   Overlay
+========================================================= */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: -1;
 }
 
-/* Background Animation */
+body.dark-mode::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   Header / Navbar
+========================================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 77, 153, 0.9);
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode header {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* =========================================================
+   Navbar Layout
+========================================================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  gap: 15px;
+}
+
+/* Logo */
+.logo-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover { transform: scale(1.05); }
+
+/* Nav Links */
+.nav-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 16px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: calc(100% - 32px);
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #004d99;
+  transform: scale(1.05);
+}
+
+body.dark-mode .nav-links li a { color: #e0e0e0; }
+
+body.dark-mode .nav-links li a:hover,
+body.dark-mode .nav-links li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.nav-links .dot {
+  color: white;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+/* =========================================================
+   Right Section (Auth + Theme)
+========================================================= */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.auth-links {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.auth-links a:hover {
+  color: #004d99;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.theme-label { color: white; margin-right: 5px; }
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider { background-color: #2196F3; }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* Nav Toggle Button (Mobile) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* =========================================================
+   Main Content
+========================================================= */
+main {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  text-align: center;
+}
+
+/* Welcome Box */
+.welcome-container {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+body.dark-mode .welcome-container {
+  background-color: rgba(24, 24, 24, 0.85);
+  color: #f0f0f0;
+}
+
+.welcome-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #004d99;
+}
+
+.welcome-container p {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+
+/* CTA */
+.cta-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Greeting Message */
+.greeting-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dark-mode .greeting-message {
+  background-color: rgba(40, 40, 40, 0.85);
+  color: #eee;
+}
+
+/* =========================================================
+   Background Animation Layer
+========================================================= */
 .el {
-    background: conic-gradient(
-        from 180deg at 50% 70%,
-        hsla(0, 0%, 98%, 1) 0deg,
-        #eec32d 72deg,
-        #ec4b4b 144deg,
-        #709ab9 216deg,
-        #4dffbf 288deg,
-        hsla(0, 0%, 98%, 1) 1turn
-    );
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
+  background: conic-gradient(
+    from 180deg at 50% 70%,
+    hsla(0, 0%, 98%, 1) 0deg,
+    #eec32d 72deg,
+    #ec4b4b 144deg,
+    #709ab9 216deg,
+    #4dffbf 288deg,
+    hsla(0, 0%, 98%, 1) 1turn
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  mask: radial-gradient(circle at 50% 50%, white 2px, transparent 2.5px) 50% 50% / var(--size) var(--size),
         url("https://assets.codepen.io/605876/noise-mask.png") 256px 50% / 256px 256px;
-    mask-composite: intersect;
-    animation: flicker 20s infinite linear;
-    z-index: -1;
+  mask-composite: intersect;
+  animation: flicker 20s infinite linear;
+  z-index: -1;
 }
 
 @keyframes flicker {
-    to {
-        mask-position: 50% 50%, 0 50%;
-    }
+  to { mask-position: 50% 50%, 0 50%; }
 }
 
-/* Content Styling */
-.content {
-    text-align: center;
-    padding: 2rem;
-    background: rgba(48, 46, 46, 0.7);
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    max-width: 800px;
-    margin: 20px;
-}
+/* =========================================================
+   Responsive Adjustments
+========================================================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-/* Text Styling */
-h1, h2, h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 77, 153, 0.95);
+    border-top: 1px solid #fff;
+  }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1rem; }
+  .nav-links.active { display: flex; }
 
-p {
-    color: #d3d3d3;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
+  .nav-toggle { display: flex; }
 
-a {
-    color: var(--highlight-color);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Image Styling */
-.pic {
-    height: 400px;
-    margin: 20px auto;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-}
-
-.profile-pic {
-    width: 652px;
-    border: 3px solid var(--highlight-color);
-}
-
-.long-pic {
-    width: auto; 
-    max-width: 100%;
-    height: auto; 
-    margin: 20px auto;
-    border: 5px solid #171716;
-    box-shadow: 0 0 15px rgba(29, 29, 28, 0.5);
-    display: block;
-    object-fit: contain; 
-    border-radius: 8px;
-}
-
-.wide-pic {
-    width: 652px;
-    height: 400px;
-    margin: 20px auto;
-    border: 5px solid #171716;
-    box-shadow: 0 0 15px rgba(29, 29, 28, 0.5);
-}
-
-
-/* LinkedIn Post */
-.linkedin-post {
-    margin: 20px auto;
-    text-align: center;
-    max-width: 600px;
+  .auth-links,
+  .theme-toggle-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
