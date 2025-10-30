@@ -1,0 +1,26 @@
+body {
+  min-height: 100vh;
+  background-color: var(--light-bg, #f9f9f9);
+  color: var(--light-text, #222);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--dark-bg, #121212);
+  color: var(--dark-text, #f1f1f1);
+}
+
+body.dark section,
+body.dark header,
+body.dark footer,
+body.dark main {
+  background-color: transparent;
+  color: inherit;
+}
+
+body.dark .card,
+body.dark article,
+body.dark .achievements {
+  background-color: #1e1e1e;
+  color: #e5e5e5;
+}
