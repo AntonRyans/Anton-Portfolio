@@ -1,0 +1,191 @@
+/* ===============================
+   YEAR ABROAD PAGE STYLING
+================================ */
+
+/* Container */
+main.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+/* Page title */
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--primary-color, #4A90E2);
+    margin-bottom: 1.5rem;
+}
+
+/* Profile picture */
+.profile-pic {
+    display: block;
+    margin: 1rem auto 2rem auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color, #4A90E2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Paragraphs */
+main p {
+    line-height: 1.7;
+    color: var(--text-color, #333);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Headings */
+main h2 {
+    color: var(--secondary-color, #F5A623);
+    font-size: 1.7rem;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+main h3 {
+    font-size: 1.35rem;
+    color: var(--primary-color, #4A90E2);
+    margin-bottom: 0.5rem;
+}
+
+/* Courses & Sections */
+.course {
+    margin-bottom: 2rem;
+}
+
+.course-img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* Project Spotlight Card */
+.project-spotlight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--card-bg, #f5f5f5);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-spotlight:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Media Container */
+.media-container {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.media-container img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* Project Text */
+.project-text {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Video Element */
+.project-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    background-color: #000;
+}
+
+/* Play Overlay */
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    background: rgba(0,0,0,0.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover .play-overlay {
+    opacity: 1;
+}
+
+/* Video Block */
+.video-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* ===============================
+   RESPONSIVE LAYOUT
+================================ */
+@media (max-width: 900px) {
+    .project-spotlight {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .media-container, .video-wrapper {
+        max-width: 100%;
+    }
+
+    .project-text {
+        text-align: left;
+    }
+}

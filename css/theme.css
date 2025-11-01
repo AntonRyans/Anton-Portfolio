@@ -1,26 +1,84 @@
+/* ===============================
+   THEME.CSS - General Layout
+================================ */
+
+/* Root Variables */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #F5A623;
+    --background-color: #fdfdfd;
+    --text-color: #333;
+    --heading-color: #1a1a1a;
+    --link-color: var(--primary-color);
+    --link-hover-color: var(--secondary-color);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  min-height: 100vh;
-  background-color: var(--light-bg, #f9f9f9);
-  color: var(--light-text, #222);
-  transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center; /* center everything */
 }
 
-body.dark {
-  background-color: var(--dark-bg, #121212);
-  color: var(--dark-text, #f1f1f1);
+/* ---------- Top Navigation ---------- */
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center nav links */
+    gap: 1rem;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
 }
 
-body.dark section,
-body.dark header,
-body.dark footer,
-body.dark main {
-  background-color: transparent;
-  color: inherit;
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color var(--transition-speed), background var(--transition-speed);
+    border-radius: var(--border-radius);
 }
 
-body.dark .card,
-body.dark article,
-body.dark .achievements {
-  background-color: #1e1e1e;
-  color: #e5e5e5;
+.topnav a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topnav a.active {
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* ---------- Main Content ---------- */
+.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Center all headings */
+.content h1, .content h2, .content h3 {
+    text-align: center;
+}
+
+/* Center paragraphs */
+.content p {
+    text-align: center;
+}
+
+/* Center links */
+.content a {
+    display: inline-block;
+    margin: 0.5rem auto;
+    text-align: center;
 }

@@ -1,0 +1,49 @@
+/* ---------- CONTACT PAGE SPECIFIC STYLES ---------- */
+
+/* Style for all contact links (Email, GitHub, LinkedIn) */
+.content a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0078d7; /* Blue tone for buttons */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+/* Hover effect for links */
+.content a:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 120, 215, 0.3);
+}
+
+/* For visited links */
+.content a:visited {
+    color: white;
+}
+
+/* ---------- IMAGE STYLES ---------- */
+
+/* Shared styling for GitHub and LinkedIn pictures */
+.wide-pic {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on pictures */
+.wide-pic:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional — add spacing between contact sections */
+.content h2 {
+    margin-top: 40px;
+}
