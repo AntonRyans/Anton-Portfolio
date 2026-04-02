@@ -82,3 +82,24 @@ body {
     margin: 0.5rem auto;
     text-align: center;
 }
+
+/* ===============================
+  DOWNLOAD BUTTON
+   =============================== */
+
+.download-btn {
+    display: inline-block;
+    padding: 0.75rem 1.2rem;
+    background-color: #4a74f5;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.download-btn:hover {
+    background-color: #375de0;
+    transform: translateY(-2px);
+}
