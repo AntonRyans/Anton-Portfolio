@@ -1,0 +1,200 @@
+/* ===============================
+   EXPERIENCE PAGE - LIGHT THEME
+================================ */
+
+/* Base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    margin: 0;
+}
+
+/* Container */
+main.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+/* Title */
+.page-title {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #4A90E2;
+    margin-bottom: 2rem;
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+
+.timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 40px;
+    border-left: 3px solid #d1d5db;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+/* Dot */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    background: #4A90E2;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+/* ===============================
+   CARD
+================================ */
+
+.course {
+    background-color: #ffffff;
+    padding: 1.8rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.course:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.role-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.role-header h3 {
+    font-size: 1.3rem;
+    color: #4A90E2;
+    margin: 0;
+}
+
+/* Icons */
+.role-icon {
+    font-size: 1.4rem;
+}
+
+/* Meta */
+.meta {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.course p {
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/* ===============================
+   IMAGES
+================================ */
+
+/* Logos */
+.pic {
+    display: block;
+    margin: 1rem auto;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Certificates */
+.long-pic,
+.wide-pic {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin: 1.2rem auto;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Project spotlight */
+.project-spotlight {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+
+/* ---------- Top Navigation ---------- */
+.topnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center nav links */
+    gap: 1rem;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color var(--transition-speed), background var(--transition-speed);
+    border-radius: var(--border-radius);
+}
+
+.topnav a:hover {
+    color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.topnav a.active {
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .course {
+        padding: 1.4rem;
+    }
+
+    .pic {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 1.9rem;
+    }
+}

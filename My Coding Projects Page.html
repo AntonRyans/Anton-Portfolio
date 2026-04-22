@@ -3,130 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anton Ryans's Portfolio</title>
+    <title>Anton Ryans - Coding Projects</title>
+
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/codingprojects.css">
 </head>
+
 <body>
-    <div class="topnav">
-        <a  href="index.html">About Me</a>
+
+<!-- NAVBAR -->
+<div class="topnav">
+    <a href="index.html">About Me</a>
     <a class="active" href="My Coding Projects Page.html">My Coding Projects</a>
     <a href="My Experience Page.html">My Experience</a>
-    <a  href="My Achievements and Certifications Page.html">My Achievements and Certifications</a>
+    <a href="My Achievements and Certifications Page.html">My Achievements and Certifications</a>
     <a href="yearAbroad.html">My Year Abroad</a>
-    <a  href="Contact Me Page.html">Contact Me</a>
-      </div>
-    <div class="el"></div>
-    <div class="content">
-        <h1>Coding Projects</h1>
-        <h2> LetsHackLeicester 24/25 Hackathon Project </h2>
-        <p>
-            Languages, Libraries and Tools Used: Python, Pandas, HTML, CSS, and GitHub
-        </p>
-        <p>
-            • Developed the Python backend using the Pandas library to create and manage data frames,
-             and utilized the Folium library to build interactive maps with features like map positioning, centring, and map pins.
-        </p>
-        <p> 
-            • Presented the project to a panel of judges, outlining the problem being addressed,
-             the proposed solution, front-end and back-end development, benefits, future updates, and the team's contributions.   
-        </p>
+    <a href="Contact Me Page.html">Contact Me</a>
+</div>
+
+<div class="content">
+
+    <h1>Coding Projects</h1>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+
+        <!-- PROJECT 1 -->
+        <div class="timeline-item">
+            <h2>🏆 LetsHackLeicester Hackathon</h2>
+
             <p>
-                • Successfully secured 2nd place, showcasing strong technical skills, teamwork, and problem-solving abilities.
-            </p>  
-        <p>
-            <a href="https://github.com/AntonRyans/letsHack09" target="_blank" download class="download-btn">Project Repository</a>
-        </p>
-             <video width="652" height="400" controls>
+                Languages, Libraries and Tools Used: Python, Pandas, HTML, CSS, GitHub, Folium
+            </p>
+
+            <p>
+                Developed a location-based event tracker using Python and Pandas, integrating Folium for interactive mapping.
+                Collaborated across front-end and back-end systems and delivered a final pitch to judges.
+                The project achieved <b>2nd place</b>.
+            </p>
+
+            <a href="https://github.com/AntonRyans/letsHack09" target="_blank" class="download-btn">
+                Project Repository
+            </a>
+
+            <video controls>
                 <source src="vids/hackathonVidRec.mp4" type="video/mp4">
-              </video>
-        </p>
+            </video>
+        </div>
 
-        <h2> User Interface Coursework </h2>
-        <p>
-            Languages, Libraries and Tools Used: HTML, CSS, and GitHub
-        </p>
-        <p>
-    • Designed and developed a responsive, user-centred interface using HTML and CSS, applying core UI/UX principles
-    such as visual hierarchy, consistency, and accessibility to enhance usability and engagement.
-</p>
-<p> 
-    • Implemented clear information architecture and intuitive content structuring, incorporating features such as a Slang Translator concept,
-    cultural exploration sections, and navigation guidance to deliver a cohesive and user-friendly experience.   
-</p>
-<p>
-    • Achieved 80% (First-Class), demonstrating strong front-end development skills, attention to detail,
-    and effective version control practices using GitHub.
-</p> 
-        <p>
-            <a href="https://antonryans.github.io/UI-CW2/index.html" target="_blank" download class="download-btn">Project Link</a>
-        </p>
-             <a href="https://github.com/AntonRyans/UI-CW2" target="_blank" download class="download-btn">Project Repository </a>
-        </p> 
+        <!-- PROJECT 2 -->
+        <div class="timeline-item">
+            <h2>🎨 User Interface Coursework</h2>
 
-        <h2> Data Analysis and Visualization on Electronic Items Price List </h2>
-        <p>
-            Languages, Libraries and Tools Used: Python, Pandas, Matplotlib, and GitHub
-        </p>
-        <p>
-            • Analysed and visualized data of 50 electronic items,
-             including costs, selling prices, margins, quantity sold, and profit.
-        </p>
-        <p>
-            • Implemented a menu-driven interface with 14 options for data manipulation and calculation (sum, mean, median).
-        </p>
-        <p>
-            <a href="https://github.com/AntonRyans/pandas-data-analysis-electronic-items" target="_blank" download class="download-btn">Project Repository</a>
-        </p>
-             <video width="652" height="400" controls>
+            <p>
+                Languages, Libraries and Tools Used: HTML, CSS, GitHub
+            </p>
+
+            <p>
+                Designed a responsive, user-centred UI applying UX principles such as hierarchy, accessibility, and structure.
+                Achieved <b>First-Class (80%)</b>.
+            </p>
+
+            <a href="https://antonryans.github.io/UI-CW2/index.html" target="_blank" class="download-btn">
+                Live Project
+            </a>
+
+            <a href="https://github.com/AntonRyans/UI-CW2" target="_blank" class="download-btn">
+                Repository
+            </a>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="timeline-item">
+            <h2>📊 Data Analysis & Visualization Project</h2>
+
+            <p>
+                Languages, Libraries and Tools Used: Python, Pandas, Matplotlib, GitHub
+            </p>
+
+            <p>
+                Analysed 50 electronic items using Pandas and Matplotlib, building a menu-driven system with 14 features.
+                Extracted insights on profit, margins, and sales trends.
+            </p>
+
+            <a href="https://github.com/AntonRyans/pandas-data-analysis-electronic-items"
+               target="_blank"
+               class="download-btn">
+                Project Repository
+            </a>
+
+            <video controls>
                 <source src="vids/pandasVidRec.mp4" type="video/mp4">
-              </video>
-        </p>
+            </video>
+        </div>
 
-        <h2> Stock Price Prediction </h2>
-        <p>
-            Languages, Libraries and Tools Used: Python, CSV, Numpy, Sci-kit Learn, Matplotlib, and GitHub
-        </p>
-        <p>
-            • Processed and arranged stock price data for prediction using regression models.
-        </p>
-        <p>
-            • Visualized stock prices with Vector Regression Graphs, including RBF, Linear, and Polynomial models.
-        </p>
-        <p>
-            <a href="https://github.com/AntonRyans/predict-stock-prices" target="_blank" download class="download-btn">Project Repository</a>
-        </p>
-             <video width="652" height="400" controls>
+        <!-- PROJECT 4 -->
+        <div class="timeline-item">
+            <h2>📈 Stock Price Prediction</h2>
+
+            <p>
+                Languages, Libraries and Tools Used: Python, NumPy, Scikit-Learn, Matplotlib, CSV
+            </p>
+
+            <p>
+                Built regression models (Linear, Polynomial, RBF) to predict stock prices using historical datasets.
+                Visualised trends using Matplotlib.
+            </p>
+
+            <a href="https://github.com/AntonRyans/predict-stock-prices"
+               target="_blank"
+               class="download-btn">
+                Project Repository
+            </a>
+
+            <video controls>
                 <source src="vids/predictStockVidRec.mp4" type="video/mp4">
-              </video>
-        </p>
-        <h2> Chatbot </h2>
-        <p>
-            Languages, Libraries and Tools Used: Python, SQLAlchemy, Pandas, Matplotlib, MySQL and GitHub
-        </p>
-        <p>
-            • Developed a chatbot with text-to-speech using Python, 
-            SQLAlchemy for database interactions, and Pandas for data retrieval and analysis. 
-        </p>
-        <p> 
-            • Implemented secure user data collection and storage, utilizing environment variables, parameterized SQL queries, 
-            and interactive data visualizations with Matplotlib.  
-        </p>
-        <p>
-            • Designed a menu-driven interface enabling users to dynamically explore demographic insights 
-            through bar charts categorized by age, location, and course of study.
-        </p>
-        <p>
-            <a href="https://github.com/AntonRyans/chatbot" target="_blank" download class="download-btn">Project Repository</a>
-        </p>
-             <video width="652" height="400" controls>
+            </video>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="timeline-item">
+            <h2>🤖 Data-Driven Chatbot</h2>
+
+            <p>
+                Languages, Libraries and Tools Used: Python, SQLAlchemy, Pandas, Matplotlib, MySQL
+            </p>
+
+            <p>
+                Built a chatbot with secure database integration, text-to-speech features, and data visualisation tools.
+                Enabled demographic analysis through interactive menus.
+            </p>
+
+            <a href="https://github.com/AntonRyans/chatbot"
+               target="_blank"
+               class="download-btn">
+                Project Repository
+            </a>
+
+            <video controls>
                 <source src="vids/chatbotRec.mp4" type="video/mp4">
-              </video>
-        </p>     
+            </video>
+        </div>
+
     </div>
+</div>
 
-<!-- Include lightbox JS -->
 <script src="js/lightbox.js"></script>
-
-
 </body>
 </html>
