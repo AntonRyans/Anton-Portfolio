@@ -33,8 +33,19 @@
       and apply my technical and creative skills in unique ways.
     </p>
 
+    
+<h2>Filter Periods </h2>
+
+<div id="myBtnContainer" class="filter-buttons">
+  <button class="btn active" onclick="filterSelection('all')">All Periods</button>
+  <button class="btn" onclick="filterSelection('period1')">Period 1</button>
+  <button class="btn" onclick="filterSelection('period2')">Period 2</button>
+  <button class="btn" onclick="filterSelection('period3')">Period 3</button>
+  <button class="btn" onclick="filterSelection('period4')">Period 4</button>
+</div>
+
     <!-- Courses Section -->
-    <section class="study-section">
+    <section class="study-section filterDiv period1">
       <h2>Courses in Period 1</h2>
 
       <article class="course">
@@ -127,7 +138,7 @@
     </section>
 
         <!-- Courses Section - Period 2 -->
-    <section class="study-section">
+     <section class="study-section filterDiv period2">
       <h2>Courses in Period 2</h2>
 
       <article class="course">
@@ -231,7 +242,7 @@
     </section>
 
   <!-- Courses Section - Period 3 -->
-<section class="study-section">
+ <section class="study-section filterDiv period3">
   <h2>Courses in Period 3</h2>
 
   <article class="course">
@@ -321,7 +332,7 @@
 </section>
 
 <!-- Courses Section - Period 4 -->
-<section class="study-section">
+ <section class="study-section filterDiv period4">
   <h2>Courses in Period 4</h2>
 
   <!-- Computational Intelligence -->
@@ -353,6 +364,8 @@
       <li>understand reinforcement learning fundamentals such as Q-learning</li>
       <li>evaluate algorithm performance and justify methodological choices</li>
     </ul>
+
+    <p> <b> Final Grade: 7/10 </b> </p>
 
   </article>
 
@@ -444,6 +457,7 @@
   </article>
 </section>
 
+<script src="js/filter.js"></script>
   </main>
 
 </body>
