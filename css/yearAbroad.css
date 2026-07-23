@@ -414,3 +414,130 @@ video {
     background-color: #0077cc;
     color: white;
 }
+
+/* ===========================
+   Grades Transcript Section
+=========================== */
+
+.grades-section {
+    margin: 60px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+}
+
+
+.grades-section h2 {
+    color: var(--text-h);
+    margin-bottom: 15px;
+}
+
+
+.grades-section p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+
+/* Table */
+
+.grades-table {
+
+    width: 100%;
+    margin-top: 30px;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border: 2px solid #222;
+
+}
+
+
+/* Header */
+
+.grades-table thead th {
+
+    background: #08060d;
+
+    color: white;
+
+    padding: 15px;
+
+    text-align: left;
+
+    border: 1px solid #555;
+
+    font-size: 16px;
+
+}
+
+
+/* Cells */
+
+.grades-table td {
+
+    padding: 14px;
+
+    color: #333;
+
+    border: 1px solid #ccc;
+
+    background: white;
+
+}
+
+
+/* Row hover */
+
+.grades-table tbody tr:hover {
+
+    background: rgba(170, 59, 255, 0.08);
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .grades-table {
+
+        display:block;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+    }
+
+
+    .grades-section {
+
+        padding:20px;
+
+    }
+
+}
+
+/* Mobile Responsive */
+
+@media(max-width:700px) {
+
+    .grades-table {
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 10px;
+    }
+
+}
