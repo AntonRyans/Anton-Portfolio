@@ -117,13 +117,13 @@ body {
 }
 
 .footer h2{
-    color:#4f8df7;
+    color:white;
     font-size:2.5rem;
     margin-bottom:10px;
 }
 
 .footer-text{
-    color:#bdbdbd;
+    color:white;
     font-size:1.1rem;
     margin-bottom:50px;
 }
@@ -154,7 +154,7 @@ body {
 
 .footer-icon{
     font-size:3rem;
-    color:#4f8df7;
+    color:#3a3a3a;
     margin-bottom:20px;
 }
 
